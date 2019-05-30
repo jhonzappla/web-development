@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<body>
+    
+<h3><ins>Part 1</ins></h3>  
+<script>
+    //Part 1 Function Huron's formula
+    function huron(a,b,c){
+        const s = (a+b+c)/2;
+        ans = Math.sqrt(s*(s-a)*(s-b)*(s-c));
+        ans = ans.toFixed(2);
+        return ans;
+    }
+    document.write("The area for a triangle with sides 50, 37, 25 is: "+huron(50,37,25));
+</script><br><br>
+    
+<h3><ins>Part 2</ins></h3>
+<button onclick="counter()">Coin Counter</button><br>
+<p id="part2"></p>
+<script>
+    //Part 2 Function Huron's formula
+    function counter(){
+        var quarts = 0;
+        var dimes = 0;
+        var nicks = 0;
+        var pens = 0;
+        var total = prompt("Please enter total amount of change:", "118");
+        if (total == null || total == "" || total.includes("-")){
+          document.getElementById("part2").innerHTML = "Please enter valid input. Only integers, no negatives.";
+        } 
+        else{
+            if(total.includes('.')){
+                total = total.replace('.','');
+            }
+            if(total.includes(',')){
+                total = total.replace(',','');
+            }
+            total = parseInt(total);
+            while(total>0){
+                if(total>=25){
+                    quarts += 1;
+                    total -= 25;
+                }
+                else if(total>=10){
+                    dimes += 1;
+                    total -= 10;
+                }
+                else if(total>=5){
+                    nicks += 1;
+                    total -= 5;
+                }
+                else if(total>=1){
+                    pens += 1;
+                    total -= 1;
+                }
+                else{
+                    break;
+                }
+            }
+            document.getElementById("part2").innerHTML = "Quarters: "+quarts+"<br>Dimes: "+dimes+"<br>Nickels: "+nicks+"<br>Pennies: "+pens;
+        }
+    }
+</script>
+
+</body>
+</html>

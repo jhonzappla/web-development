@@ -1,0 +1,28 @@
+<html>
+<h2><ins>Homework 9</ins></h2>
+<header id="displayName">
+</header><br>
+
+<input type="button" onclick="askName()" value="What's your name?" />
+<form id="textField" style="display:none;"><br>
+    <label>Enter Name: </label><br>
+    <input type="text" id="name" onfocus="this.value=''" value="John Zappala" required>
+    <button type="button" onclick="showName()">Submit</button>
+</form>
+
+<script>
+    function askName() {
+        document.getElementById('textField').style.display = "block";
+    }
+
+    function showName() {
+        var name = document.getElementById('name').value;
+        if (name === "") {
+            name = "Yo Mamma";
+        }
+        document.getElementById('displayName').append("Welcome " + name + "!");
+    }
+
+</script>
+
+</html>

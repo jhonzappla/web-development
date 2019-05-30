@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>United States Geography Quiz</title>
+	<meta name="description" content="Short Day of the Week Example Script">
+	<meta name="author" content="John Zappala">
+</head>
+<body>
+<form action="Homework3results.php" method="post">
+  First name:<br>
+  <input type="text" name="firstname">
+  <br>
+  Last name:<br>
+  <input type="text" name="lastname">
+  <br><br>
+    <!-- Drop down question -->
+    1. What are the 5 Great Lakes?<br>
+    <select name="q1">
+        <option value="Huron, Ottowa, Michigan, Erie, Champlain">Huron, Ottowa, Michigan, Erie, Champlain</option>
+        <option value="Wisconsin, Ontario, Michigan, Buffalo, Superior">Wisconsin, Ontario, Michigan, Buffalo, Superior</option>
+        <option value="Huron, Ontario, Michigan, Erie, Superior">Huron, Ontario, Michigan, Erie, Superior</option>
+        <option value="Wisconsin, Ontario, Detroit, Erie, Superior">Wisconsin, Ontario, Detroit, Erie, Superior</option>
+        <option value="Huron, Ontario, Minnesota, Erie, Superior">Huron, Ontario, Minnesota, Erie, Superior</option>
+    </select>
+    <br><br>
+    <!-- radio button question -->
+    2. Which state's capital is Jefferson City?<br>
+    <input type="radio" name="q2" value=" Wyoming"> Wyoming<br>
+    <input type="radio" name="q2" value=" Alabama"> Alabama<br>
+    <input type="radio" name="q2" value=" Missouri"> Missouri<br>
+    <input type="radio" name="q2" value=" Iowa"> Iowa<br>
+    <br>
+    <!-- checkbox question -->
+    3. Which state(s) are in the New England region?<br>
+    <input type="checkbox" name="q3[]" value=" New Jersey"> New Jersey<br>
+    <input type="checkbox" name="q3[]" value=" Washington"> Washington<br>
+    <input type="checkbox" name="q3[]" value=" Vermont"> Vermont<br>
+    <input type="checkbox" name="q3[]" value=" Virginia"> Virginia<br>
+    <input type="checkbox" name="q3[]" value=" Rhode Island"> Rhode Island<br>
+    <br>
+    <!-- radio button question -->
+    4. Which is the smallest state?<br>
+    <input type="radio" name="q4" value=" Rhode Island"> Rhode Island<br>
+    <input type="radio" name="q4" value=" Connecticut"> Connecticut<br>
+    <input type="radio" name="q4" value=" Delaware"> Delaware<br>
+    <br>
+    <!-- radio button question -->
+    5. Which state has the longest continuous street in America, Colfax Avenue?<br>
+    <input type="radio" name="q5" value=" Kansas"> Kansas<br>
+    <input type="radio" name="q5" value=" Colorado"> Colorado<br>
+    <input type="radio" name="q5" value=" Texas"> Texas<br>
+    <input type="radio" name="q5" value=" California"> California<br>
+    <br>
+  <input type="submit" value="Submit">
+</form> 
+
+</body>
+</html>
